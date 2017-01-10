@@ -1,0 +1,104 @@
+class Segment implements Comparable<Segment> {
+	private static int comparingX;
+	private final Point p1;
+	private final Point p2;
+	public Segment(Point p1, Point p2) throws IllegalArgumentException;
+	public Point getP1();
+	public Point getP2();
+	public Point intersectionWith(Segment that);
+	public int nbIntersectionsWithCircle(Point center, int radius);
+	public static void setComparingX(int x);
+	public int compareTo(Segment s);
+	public boolean equals(Object o);
+	public int hashCode();
+	public String toString();
+}
+
+
+
+public final class DataSet {
+	private final HashSet<String> urls;
+	public DataSet();
+	public void addURLs(Set<String> urls);
+	public Set<String> getURLs();
+}
+
+
+public final class Edge {
+	private final int id;
+	private final Vertex[] ends;
+	private final DataSet data;
+
+	public Edge(int id, Vertex end1, Vertex end2);
+	public int getId();
+	public Vertex getEnd1();
+	public Vertex getEnd2();
+	public DataSet getData();
+	public boolean equals(Object o);
+	public int hashCode();
+}
+
+
+public final class Vertex {
+	private final int id;	
+	private final String label;
+	private final DataSet data;
+	private final HashMap<Vertex, Edge> neighbours;
+	private ArrayList<Vertex> children;
+	private int suborder;
+	private int depth; 
+
+	public Vertex(int id, String label);
+	public int getId();
+	public String getLabel();
+	public DataSet getData();
+	public Set<Vertex> getNeighbours();
+	public Edge getEdgeTo(Vertex v);
+	public void addNeighbourIfAbsent(Vertex v, Edge e);		
+	public List<Vertex> getChildren();
+	public void clearChildren();
+	public void addChild(Vertex v);
+	public int getSuborder();
+	public int getDepth();
+	public int updateDepthAndSuborder(int depth);
+	public String toString();
+}
+
+public final class Graph {
+	private final ArrayList<Vertex> vertices;
+	private final ArrayList<Edge> edges;
+	private ArrayList<Vertex> roots;
+	private HashSet<Edge> extraEdges;
+	private Set<String> getURLsFromIds(JSONArray urls, JSONArray urlIds) throws JSONException;
+	private void initVertices(JSONArray urls, JSONArray jsonVertices) throws JSONException;
+	private void initEdges(JSONArray urls, JSONArray jsonEdges) throws JSONException;
+	public Graph(String graph) throws IllegalArgumentException;
+	public List<Vertex> getVertices();
+	public List<Edge> getEdges();
+	public List<Vertex> getRoots();
+	public void changeRoot(Vertex mainRoot);
+	public Set<Edge> getExtraEdges();
+}
+
+
+public final class RadialLayout {
+	private final static double MAINWIDTH = Math.PI/2;
+	private final static double MAINSTART = 0.0;
+	private final static double SPACEWIDTH = 2000.0;
+	private final Graph graph;
+	private double maxRadius;
+	private final ArrayList<Double> thetas;
+	private final ArrayList<Double> depths;
+	private ArrayList<Point> points;
+	private ArrayList<Segment> segments;
+	private void updatePositions(Vertex v, double sectorStart, double sectorWidth);
+	public RadialLayout(Graph graph);
+	public Graph getGraph();
+	public double getMaxRadius();
+	public List<Double> getAngularPositions();
+	public List<Double> getDepths();
+	public List<Point> getCentralPoints();
+	public List<Segment> getSegments();
+	public int getProjectedVertexRadius();
+	public int nbSegmentIntersections();
+}

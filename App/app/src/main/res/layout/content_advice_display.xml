@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="top">
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/previousAdvice"
+        android:layout_margin="@dimen/padding"
+        android:layout_gravity="bottom|start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/arrows_left"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_margin="@dimen/padding"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"/>
+
+    <ImageButton
+        android:id="@+id/nextAdvice"
+        android:layout_margin="@dimen/padding"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/arrows_right"
+        android:visibility="gone"/>
+
+
+</FrameLayout>

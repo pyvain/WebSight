@@ -1,0 +1,35 @@
+{
+	// Les M URLs
+	"urls": ["url1", ..., "urlM"],
+
+	// Les conseils correspondant à chacune des M URLs
+	"advice": ["pieceofadvice1", ..., "pieceofadviceM"], 
+
+	// Les sommets
+	"vertices": [
+					{"kw":"keyword1",
+					 "url_ids":[vertex1_url_id_1, ..., vertex1_url_id_X]},
+					 ...,
+					{"kw":"keywordN",
+					 "url_ids":[vertexN_url_id_1, ..., vertexN_url_id_Y]},
+				],
+		
+	// Les P arêtes :
+	"edges":[
+		// Premiere arête :
+		{
+			"src": edge1_vertex_id_1, 
+			"dst": edge1_vertex_id_2,
+			"url_ids":[edge1_url_id_1, ..., edge1_url_id_Z]
+		},
+
+		...,
+
+		// Derniere arête :
+		{
+			"src":edgeP_vertex_id_1, 
+			"dst":edgeP_vertex_id_2,
+			"url_ids":[edgeP_url_id_1, ..., edgeP_url_id_W]
+		}
+	]
+}	

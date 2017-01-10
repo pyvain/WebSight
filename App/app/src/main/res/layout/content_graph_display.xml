@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical"
+    tools:context="fr.pyvain.websight.websight.GraphDisplay"
+    tools:showIn="@layout/activity_graph_display">
+
+    <fr.pyvain.websight.websight.SweetGraphs.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:id="@+id/graphView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/noGraphText"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/largeTextSize"
+        android:gravity="center"
+        android:text="@string/firstLaunch"/>
+
+    <ImageButton
+        android:id="@+id/goToParameters"
+        android:layout_margin="@dimen/padding"
+        android:layout_gravity="top|start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/parameter_gear"
+        android:contentDescription="@string/parameters"/>
+
+    <ImageButton
+        android:id="@+id/changeLabels"
+        android:visibility="gone"
+        android:layout_margin="@dimen/padding"
+        android:layout_gravity="bottom|start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/labels"
+        android:contentDescription="@string/changeLabels"/>
+
+    <ImageButton
+        android:id="@+id/getGraph"
+        android:layout_margin="@dimen/padding"
+        android:layout_gravity="top|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/refresh_arrows"
+        android:contentDescription="@string/refresh"/>
+
+</FrameLayout>

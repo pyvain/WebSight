@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "websight",
+  "version": "0.0.0",
+  "description": "websight's server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "websight's team",
+  "license": "unlicenced",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "jwt-simple": "^0.5.0",
+    "mysql": "^2.10.2",
+    "nodemailer": "^2.3.2",
+    "validator": "^5.2.0"
+  }
+}

@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">WebSight Personal Data Tracker</string>
+
+    <string name="serverUrl">http://websight.pyvain.fr/</string>
+    <string name="signInPath">auth/signin/</string>
+    <string name="signUpPath">auth/signup/</string>
+    <string name="getGraphPath">request/graph/</string>
+    <string name="getAdvicePath">request/advice/</string>
+    <string name="deleteAccuntPath">auth/deleteaccount</string>
+    <string name="lostPasswordPath">auth/lostpassword</string>
+    <string name="sendModelPath">/request/emailmodels</string>
+
+
+
+    <string name="ioExceptionMessage">Communication error, please try again later.</string>
+    <string name="invalidCredentialsExceptionMessage">Invalid credentials, please try again.</string>
+    <string name="serverExceptionMessage">An error occurred, please try again later.</string>
+    <string name="emailAlreadyUsedExceptionMessage">An account is already associated to this email, please try again with another one.</string>
+    <string name="fileExceptionMessage">An internal error occurred. Your device\'s memory may be full or corrupted.</string>
+    <string name="successfulSignUpMessage">Thank you for signing up, you should now receive an email explaining how to activate your account</string>
+    <string name="fillDataMessage">You must fill at least one data to get a graph!</string>
+    <string name="ServiceUnvailableMessage">Qwant is most likely down at the moment, please try again later!</string>
+    <string name="NoConnexionMessage">You are not connected to internet! Please connect and try again.</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="rePassword">Re-enter password</string>
+    <string name="logoDescription">WebSight\'s logo</string>
+    <string name="signIn">Sign in</string>
+    <string name="signUpLink">Sign up</string>
+    <string name="signUpHeader">Sign up, it\'s free!</string>
+    <string name="signUp">Sign up</string>
+    <string name="returnToSignIn">Already have an account? Sign in</string>
+
+    <string name="dataForm">Please fill in your data!</string>
+
+    <string name="dataFile">data.ser</string>
+    <string name="tokenFile">token.ser</string>
+    <string name="graphFile">graph.ser</string>
+
+    <string name="fillData">Fill data</string>
+    <string name="logOut">Log Out</string>
+    <string name="deleteAccount">Delete my account</string>
+    <string name="confirmDeleteAccount">Forget me!</string>
+    <string name="generalAdviceButton">Right to be forgotten</string>
+
+    <string name="firstLaunch">Looks like you are new!\nTo start your journey fill in some data by clicking on the gear icon.\nThen you will be able to generate your graph, simply tap the arrow icon!</string>
+
+    <string name="accountDeltionExplaination">This operation is irreversible. You will loose everything tied to your WebSight account (Magnifiers, Graphs). We will completely remove you from our database if you validate the deletion with your password.</string>
+
+    <string name="title_activity_graph_display2">GraphDisplay2</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="powered_by_qwant">Powered by</string>
+    <string name="qwant_adress">https://www.qwant.com</string>
+
+    <string name="general_advice"><![CDATA[<html><head><style>h1, p, em, li, a {color: white;}
+ a {font-weight: bold;}
+ h1 {font-size: large;}
+ p {text-align: justify;}</style></head><body><h1>What is personal data?</h1><p>Personal data is any piece of information relating to an identified or identifiable natural person, i.e. any individual person. For instance names, addresses, telephone numbers or even login and password details may be regarded as personal data.</p><h1>Do I have privacy rights?</h1><p>Privacy and data protection principles have been adopted by a large number of countries around the globe. Principles relating to the protection of your privacy and personal data are very often enforceable and, even in countries where there is no specific laws to that effect, you should always try to exercise these four basic rights: the rights to access, to rectify and update, to have data erased and to oppose to the processing of your data.</p><p>Exercise of these rights may be subject to certain restrictions or conditions locally.</p><h1>What’s the right to be forgotten?</h1>\n\n\t
+<p>The so-called “right to be forgotten” is a right which essentially applies under European law  and which is a way of designating the right to have data erased. Certain conditions apply to the exercise of this right. Very often, the “right to be forgotten” is associated with the obligation which is imposed on search engines to allow, under specific rules and in accordance with a ruling by the European Court of Justice (13 May 2014), individuals to request the removal of certain search results associated with them (“dereferencing”).</p><h1>How do I exercise my rights?</h1><p>To exercise  your rights you need to identify the entity which processes your personal data (e.g. the website where your information can be found, your mobile phone operator or a search engine) and send an appropriate request with adequate information. In general, you will need to provide information regarding: your identity (to prove you are who you say you are). In addition, depending on the nature of your request (access, rectify and update, erase, dereference), you will also need to provide additional information such as the link or address where the data relating to you can be found, the new updated information which should be used, the reason why you believe the information should be erased, etc.</p><p>If you want further aid in that regard, please click the button below and we will send you an email containing various models of correspondences you can send to exercise your rights.</p></body></html>]]>
+</string>
+    <string name="sendMail">Send me an email!</string>
+    <string name="emailSent">An email has been sent to your account email address!</string>
+
+    <string name="htmlHead"><![CDATA[<html><head><style>h1, p, em, li, a {color: white;}
+ a {font-weight: bold;}
+ h1 {font-size: huge;}
+ p {text-align: justify;}</style>
+<title>Websight : Advice</title></head>
+<body><h1>\"]]></string>
+    <string name="htmlTail"><![CDATA[\"</h1><p>	This data was not found with Qwant!</p></body></html>]]></string>
+
+    <string name="parameters">Parameters button</string>
+    <string name="changeLabels">Switch button between full labels and ids</string>
+    <string name="refresh">Refresh graph button</string>
+
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    tools:context="fr.pyvain.websight.websight.Parameters"
+    tools:showIn="@layout/activity_parameters">
+
+    <Button
+        android:id="@+id/fillDataButton"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="7%"
+        android:text="@string/fillData"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"
+        android:background="@drawable/button" />
+
+    <Button
+        android:id="@+id/generalAdviceButton"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="7%"
+        android:layout_below="@id/fillDataButton"
+        android:text="@string/generalAdviceButton"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"
+        android:background="@drawable/button" />
+
+    <Button
+        android:id="@+id/logOutButton"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="7%"
+        android:layout_below="@id/generalAdviceButton"
+        android:text="@string/logOut"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"
+        android:background="@drawable/button" />
+
+    <Button
+        android:id="@+id/deleteAccountButton"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="7%"
+        android:layout_below="@id/logOutButton"
+        android:text="@string/deleteAccount"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"
+        android:background="@drawable/button" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteAccountDetails"
+        android:visibility="gone"
+        app:layout_widthPercent="70%"
+        app:layout_marginTopPercent="4%"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/deleteAccountButton"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/warningText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="7%"
+            android:text="@string/accountDeltionExplaination"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/smallTextSize"/>
+
+        <LinearLayout
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/interline">
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:textSize="@dimen/regularTextSize"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorHint"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionSend"/>
+            <LinearLayout
+                style="@style/Underlining"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/validateDeletionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/interline"
+            android:text="@string/confirmDeleteAccount"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/regularTextSize"
+            android:background="@drawable/button" />
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>

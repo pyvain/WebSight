@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBg"
+    tools:context="fr.pyvain.websight.websight.SignIn"
+    tools:showIn="@layout/activity_sign_in">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        app:layout_heightPercent="40%"
+        app:layout_aspectRatio="100%"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        app:layout_marginTopPercent="5%"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logoDescription" />
+
+    <LinearLayout
+        android:id="@+id/emailInput"
+        app:layout_widthPercent="60%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@id/logoImageView"
+        app:layout_marginTopPercent="8%">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:textSize="@dimen/regularTextSize"
+            android:background="@android:color/transparent" />
+        <LinearLayout
+            style="@style/Underlining"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwordInput"
+        app:layout_widthPercent="60%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@id/emailInput"
+        android:layout_marginTop="@dimen/interline">
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:textSize="@dimen/regularTextSize"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:background="@android:color/transparent"
+            android:imeOptions="actionSend"/>
+        <LinearLayout
+            style="@style/Underlining"
+            android:background="@color/colorPrimary"/>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/padding"
+            android:id="@+id/lostPasswordLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/signInButton"
+        app:layout_widthPercent="60%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/passwordInput"
+        app:layout_marginTopPercent="5%"
+        android:text="@string/signIn"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"
+        android:background="@drawable/button" />
+
+    <RelativeLayout
+        android:id="@+id/qwant"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="7%"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/powered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/powered_by_qwant"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/qwant_logo"
+            android:textColor="@color/colorPrimary"/>
+        <ImageView
+            android:id="@+id/qwant_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/qwant"
+            android:contentDescription="Qwant's logo"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/signUpLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/signUpLink"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/smallTextSize" />
+    
+
+</android.support.percent.PercentRelativeLayout>

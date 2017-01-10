@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBg"
+    tools:context="fr.pyvain.websight.websight.SignUp"
+    tools:showIn="@layout/activity_sign_up">
+
+    <TextView
+        android:id="@+id/signUpHeader"
+        app:layout_widthPercent="60%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="5%"
+        android:text="@string/signUpHeader"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/largeTextSize" />
+
+    <LinearLayout
+        android:id="@+id/emailInput"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@id/signUpHeader"
+        app:layout_marginTopPercent="11%">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:textSize="@dimen/regularTextSize"
+            android:background="@android:color/transparent" />
+        <LinearLayout
+            style="@style/Underlining"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/emailWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallTextSize"
+            android:text="warning"
+            android:textColor="@color/colorWarning"
+            android:textSize="@dimen/smallTextSize"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwordInput"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@id/emailInput"
+        app:layout_marginTopPercent="5%">
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:textSize="@dimen/regularTextSize"
+            android:background="@android:color/transparent" />
+        <LinearLayout
+            style="@style/Underlining"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/passwordWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallTextSize"
+            android:text="warning"
+            android:textColor="@color/colorWarning"
+            android:textSize="@dimen/smallTextSize"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rePasswordInput"
+        app:layout_widthPercent="80%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@id/passwordInput"
+        app:layout_marginTopPercent="5%">
+
+        <EditText
+            android:id="@+id/rePasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/rePassword"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:textSize="@dimen/regularTextSize"
+            android:background="@android:color/transparent" />
+        <LinearLayout
+            style="@style/Underlining"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/rePasswordWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallTextSize"
+            android:text="warning"
+            android:textColor="@color/colorWarning"
+            android:textSize="@dimen/smallTextSize"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signUpButton"
+        app:layout_widthPercent="60%"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rePasswordInput"
+        app:layout_marginTopPercent="7%"
+        android:text="@string/signUp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regularTextSize"
+        android:background="@drawable/button" />
+
+    <TextView
+        android:id="@+id/signInLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/returnToSignIn"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/smallTextSize" />
+
+
+</android.support.percent.PercentRelativeLayout>
